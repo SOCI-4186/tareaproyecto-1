@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="never" default-locale="es-ES">
+  <info>
+    <title>APA-CLACSO (Español)</title>
+    <id>http://www.zotero.org/styles/apa-clacso</id>
+    <link href="http://www.zotero.org/styles/apa-clacso" rel="self"/>
+    <link href="http://www.zotero.org/styles/apa" rel="template"/>
+    <link href="https://www.clacso.org" rel="documentation"/>
+    <author>
+      <name>Adaptación para CLACSO</name>
+    </author>
+    <category citation-format="author-date"/>
+    <category field="social_science"/>
+    <summary>Estilo APA 7ª edición adaptado para CLACSO: nombres completos, fechas de edición original entre corchetes</summary>
+    <updated>2025-02-01T12:00:00+00:00</updated>
+    <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
+  </info>
+  <locale xml:lang="es">
+    <terms>
+      <term name="editortranslator" form="short">ed. y trad.</term>
+      <term name="translator" form="short">trad.</term>
+      <term name="editor" form="short">ed.</term>
+      <term name="edition" form="short">ed.</term>
+      <term name="volume" form="short">vol.</term>
+      <term name="issue" form="short">n.º</term>
+      <term name="page" form="short">p.</term>
+      <term name="page" form="long">página</term>
+      <term name="and">y</term>
+      <term name="et-al">et al.</term>
+      <term name="in">en</term>
+      <term name="accessed">consultado el</term>
+    </terms>
+  </locale>
+  
+  <!-- Macros -->
+  <macro name="author">
+    <names variable="author">
+      <name name-as-sort-order="all" 
+            and="text" 
+            sort-separator=", "
+            initialize-with=". "
+            delimiter=", "
+            delimiter-precedes-last="never"
+            form="long"/>
+      <label form="short" prefix=" (" suffix=")" text-case="lowercase"/>
+      <substitute>
+        <names variable="editor"/>
+        <names variable="translator"/>
+        <text macro="title"/>
+      </substitute>
+    </names>
+  </macro>
+  
+  <macro name="author-short">
+    <names variable="author">
+      <name form="short" 
+            and="text" 
+            delimiter=", "
+            initialize-with=". "/>
+      <substitute>
+        <names variable="editor"/>
+        <names variable="translator"/>
+        <text variable="title" form="short"/>
+      </substitute>
+    </names>
+  </macro>
+  
+  <macro name="editor">
+    <names variable="editor" delimiter=", ">
+      <name and="text" 
+            initialize-with=". "
+            delimiter=", "
+            delimiter-precedes-last="never"
+            form="long"/>
+      <label form="short" prefix=" (" suffix=")" text-case="lowercase"/>
+    </names>
+  </macro>
+  
+  <macro name="title">
+    <choose>
+      <if type="bill book graphic legal_case legislation motion_picture report song" match="any">
+        <text variable="title" font-style="italic"/>
+      </if>
+      <else>
+        <text variable="title"/>
+      </else>
+    </choose>
+  </macro>
+  
+  <macro name="publisher">
+    <group delimiter=": ">
+      <text variable="publisher-place"/>
+      <text variable="publisher"/>
+    </group>
+  </macro>
+  
+  <macro name="issued">
+    <choose>
+      <if variable="issued">
+        <group>
+          <date variable="original-date" prefix="[" suffix="] ">
+            <date-part name="year"/>
+          </date>
+          <date variable="issued">
+            <date-part name="year"/>
+          </date>
+        </group>
+      </if>
+      <else>
+        <text term="no date" form="short"/>
+      </else>
+    </choose>
+  </macro>
+  
+  <macro name="issued-year">
+    <choose>
+      <if variable="issued">
+        <date variable="issued">
+          <date-part name="year"/>
+        </date>
+      </if>
+      <else>
+        <text term="no date" form="short"/>
+      </else>
+    </choose>
+  </macro>
+  
+  <macro name="access">
+    <choose>
+      <if variable="DOI">
+        <text variable="DOI" prefix="https://doi.org/"/>
+      </if>
+      <else-if variable="URL">
+        <text variable="URL"/>
+      </else-if>
+    </choose>
+  </macro>
+  
+  <macro name="container">
+    <choose>
+      <if type="chapter paper-conference" match="any">
+        <text term="in" text-case="capitalize-first" suffix=" "/>
+        <text macro="editor" suffix=", "/>
+        <text variable="container-title" font-style="italic"/>
+      </if>
+      <else-if type="article-journal article-magazine article-newspaper" match="any">
+        <text variable="container-title" font-style="italic" suffix=", "/>
+        <text variable="volume" font-style="italic"/>
+        <text variable="issue" prefix="(" suffix=")"/>
+      </else-if>
+      <else>
+        <text variable="container-title" font-style="italic"/>
+      </else>
+    </choose>
+  </macro>
+  
+  <macro name="locators">
+    <choose>
+      <if type="article-journal article-magazine article-newspaper" match="any">
+        <text variable="page"/>
+      </if>
+      <else-if type="chapter paper-conference" match="any">
+        <group delimiter=" ">
+          <label variable="page" form="short"/>
+          <text variable="page"/>
+        </group>
+      </else-if>
+    </choose>
+  </macro>
+  
+  <!-- Citation -->
+  <citation et-al-min="3" et-al-use-first="1" disambiguate-add-year-suffix="true" disambiguate-add-names="true" disambiguate-add-givenname="true" collapse="year">
+    <sort>
+      <key macro="author"/>
+      <key macro="issued-year"/>
+    </sort>
+    <layout prefix="(" suffix=")" delimiter="; ">
+      <group delimiter=", ">
+        <text macro="author-short"/>
+        <text macro="issued-year"/>
+        <group>
+          <label variable="locator" form="short"/>
+          <text variable="locator"/>
+        </group>
+      </group>
+    </layout>
+  </citation>
+  
+  <!-- Bibliography -->
+  <bibliography hanging-indent="true" et-al-min="21" et-al-use-first="20" entry-spacing="0">
+    <sort>
+      <key macro="author"/>
+      <key macro="issued-year" sort="ascending"/>
+      <key macro="title"/>
+    </sort>
+    <layout>
+      <group suffix=".">
+        <text macro="author" suffix=". "/>
+        <text macro="issued" prefix="(" suffix="). "/>
+        <group delimiter=". ">
+          <text macro="title"/>
+          <text macro="container"/>
+          <text macro="locators"/>
+          <text macro="publisher"/>
+          <text macro="access"/>
+        </group>
+      </group>
+    </layout>
+  </bibliography>
+</style>

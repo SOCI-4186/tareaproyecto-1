@@ -1,0 +1,63 @@
+/* Colores institucionales UPR Río Piedras */
+:root {
+  --uprrp-red: #e70033;
+  --uprrp-gray: #babcbe;
+  --uprrp-black: #261c02;
+}
+
+/* Links y acentos en rojo UPRRP */
+a {
+  color: var(--uprrp-red);
+}
+
+a:hover {
+  color: #b50029; /* Rojo más oscuro para hover */
+}
+
+/* Encabezados con acento rojo */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--uprrp-black);
+  border-bottom-color: var(--uprrp-red);
+}
+
+/* Tabla de contenido */
+.sidebar nav[role=doc-toc] ul > li > a.active {
+  border-left-color: var(--uprrp-red);
+  color: var(--uprrp-red);
+}
+
+/* Énfasis y resaltados */
+.callout-note {
+  border-left-color: var(--uprrp-red);
+}
+
+.callout-note .callout-header {
+  background-color: rgba(231, 0, 51, 0.1);
+}
+
+/* Código inline */
+code {
+  color: var(--uprrp-red);
+}
+
+/* Botones y elementos interactivos */
+.btn-primary {
+  background-color: var(--uprrp-red);
+  border-color: var(--uprrp-red);
+}
+
+.btn-primary:hover {
+  background-color: #b50029;
+  border-color: #b50029;
+}
+
+/* Tablas - encabezados */
+thead {
+  background-color: rgba(231, 0, 51, 0.1);
+  border-bottom: 2px solid var(--uprrp-red);
+}
+
+/* Referencias bibliográficas - números/enlaces */
+.citation a, #refs a {
+  color: var(--uprrp-red);
+}

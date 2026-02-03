@@ -1,0 +1,139 @@
+---
+title: "SOCI 4186-00_"
+subtitle: "Tareas de Proyecto de Investigación — №1  \nPregunta inicial de investigación"
+author: "Pon tu nombre aquí  \nSu número de estudiante"
+date: today
+date-format: long
+lang: es
+format:
+  html:
+    toc: true
+    toc-title: "Índice"
+    theme: united
+    css: uprrp-theme.css
+    embed-resources: true
+    number-sections: true
+    linkcolor: blue
+    citecolor: blue
+    urlcolor: blue
+  pdf:
+    pdf-engine: pdflatex
+    documentclass: article
+    fontsize: 12pt
+    geometry:
+      - top=1in
+      - right=1in
+      - left=1in
+      - bottom=1in
+    linestretch: 1.5
+    colorlinks: true
+    include-in-header:
+      text: |
+        \usepackage[T1]{fontenc}
+        \usepackage[utf8]{inputenc}
+bibliography: Referencias.bib
+csl: apa-clacso.csl
+---
+
+**Fecha límite de entrega: martes, 10 de febrero de 2026, a las 23:59 vía GitHub Classroom.**
+
+------------------------------------------------------------------------
+
+## Instrucciones generales
+
+### Antes de empezar
+
+Lean el archivo `README.md` incluido en este repositorio para instrucciones detalladas paso a paso. A continuación un resumen:
+
+### Qué deben hacer
+
+1.  **Cambien su nombre** en el encabezado YAML (arriba de todo, línea 4):
+
+    -   Donde dice `author: "Pon tu nombre aquí"`, pongan su nombre completo y número de estudiante
+    -   Ejemplo: `author: "María García López  \n802-12-3456"`
+
+2.  **Completen las secciones** de abajo con su tema, pregunta y justificación (mínimo 300 palabras total)
+
+3.  **Rendericen el documento** presionando el botón **Render** en RStudio (o Ctrl+Shift+K)
+
+4.  **Suban su trabajo a GitHub**:
+
+    -   Vayan a su repositorio en GitHub (en el navegador)
+    -   Hagan clic en "Add file" → "Upload files"
+    -   Suban el `.qmd` y el `.html` generado
+    -   Escriban un mensaje de commit y confirmen
+
+### Sobre el idioma
+
+-   Escriban en español con acentos correctos (Á/á, É/é, Í/í, \[Ï/ï\][^1], Ó/ó, Ú/ú, Ñ/ñ, Ü/ü).
+-   **Alternativa:** Si prefieren escribir en inglés, pueden hacerlo, pero todo el documento debe estar en inglés (británico, Oxford o estadounidense)
+
+[^1]: Este uso es más que nada para fines poéticos o literarios del español (forzar un hiato donde hay diptongo de i- o u- como en: *«...la pacïencia/ todo lo alcanza,...» (*Santa Teresa de Ávila, *Nada te turbe* \[Esp. 1582\]) o *«A mi alma de angustia llena / dejadle llorar la pena / de su eterna vïudez»* (Campoamor *Palacio* \[Esp. 1871\]), aunque antaño era común verla en otros espacios poéticamente como en *«Bajan águilas rëales / á bañarse en tu Genil»* (Zorrilla *Granada* \[Esp. 1852\])).
+
+### Sobre trabajar en grupo
+
+-   Pueden colaborar con compañeres de **cualquiera de las dos secciones** del curso (001 o 002)
+-   Si trabajan en grupo: indíquenlo en la tabla de miembros al final y asegúrense de que todos entreguen
+-   Si trabajan individualmente: pueden dejar la tabla como está o eliminarla
+
+### Si necesitan ayuda
+
+-   **Problemas técnicos:** Consulten `README.md` y `GUIA_CONFIGURACION.md`
+-   **Dudas sobre contenido:** Pregunten en clase o en horas de oficina
+-   **Errores de RStudio/Quarto:** Copien el mensaje de error y envíenlo por correo
+
+------------------------------------------------------------------------
+
+# Pregunta inicial de investigación y modalidad
+
+Les estudiantes identificarán un tema de interés, realizarán una breve búsqueda sobre su tema para que puedan empezar a concretar de tema de interés a pregunta. Deberán entregar un documento de al menos 300 palabras que incluya los siguientes componentes (por favor, etiquete cada componente como una subsección):
+
+1.  Su tema de investigación principal.
+2.  Una pregunta de investigación tentativa, o varias preguntas si no estuvieren segures de qué dirección tomar.
+3.  Una breve explicación de por qué desean explorar la pregunta/tema y por qué merece un análisis académico cuantitativo.
+4.  Indicación de modalidad de estudio: grupal o individual. Si fuere grupal, información de miembros que conformen el grupo y nombre para el grupo. De una vez, indique cuál de las tres modalidades de investigación usará (descriptiva, comparativa/explicativa, o evaluativa).
+
+# Ejemplo de respuesta
+
+## Tema y pregunta
+
+Mi tema es **capitalismo comparado**, en especial las variedades de capitalismo según @hall2001introduction. Específicamente, la discusión que se elaborara en años posteriores [@hall2009institutional], me parece una dirección útil que me lleva a la pregunta: *¿podría medirse cuantitativamente el concepto de coordinación industrial para comparar países a través del tiempo?*
+
+## Justificación
+
+Según @giovannetti2015, tal cosa es importante. Sin embargo, esto va contra lo señalado por @lopezroman2012, quien indica que mengana cosa es lo verdaderamente importante. En esto entendemos que lo primero es realmente crucial, lo que señalaran los poetas en su momento, que
+
+> y aserejé-ja-dejé. De jebe tu de jebere seibiunouva majavi an de bugui an de güididípi
+
+es decir, *I said a hip hop the hip. The hippie to the hip hip hoppa ya don't stop. The rockin' to the bang-bang boogie said up jumps the boogie* en el cierre y albores de los siglos [xx]{.smallcaps} y [xxi]{.smallcaps} [@Hails2022]. Sin embargo, otros indican que esto no es adecuado [@nunn2011slave].
+
+Se ha discutido ampliamente este tema por varios académicos [@giovannetti2015; @hall2009institutional] tal cosa...
+
+## Modalidad
+
+Este estudio, de modalidad comparativa/explicativa, estará siendo de carácter individual, como puede verse en la @tbl-miembros.
+
+# Miembros del Grupo {.unnumbered}
+
+Si el trabajo se realiza en grupo, los miembros del grupo deberán ser declarados en la tabla siguiente. Denle un nombre al grupo en este caso. El límite es de tres miembros. De no ser en grupo, meramente declarará el estudiante que estará trabajando en esto por su parte.
+
+| Nombre de Estudiante | Concentración | № de Estudiante |
+|:---------------------|:--------------|:----------------|
+| Miembro 1            |               |                 |
+| Miembro 2            |               |                 |
+| Miembro 3            |               |                 |
+
+: Miembros del grupo "los Pitirres" {#tbl-miembros}
+
+# Declaración de uso de MEL {.unnumbered}
+
+*Si utilizó herramientas de Modelos Extensos de Lenguaje (MEL/LLM) como ChatGPT, Claude, Gemini u otros para esta tarea, complete esta sección según las instrucciones del sílabo. Indique qué herramienta usó y para qué parte de la tarea. De lo contrario, escriba: "No se utilizaron herramientas de MEL en esta tarea."*
+
+\[Su declaración aquí...\]
+
+------------------------------------------------------------------------
+
+# Referencias {.unnumbered}
+
+::: {#refs}
+:::

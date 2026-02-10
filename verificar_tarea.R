@@ -141,9 +141,9 @@ contenido <- tryCatch(
   error = function(e) ""
 )
 
-if (grepl("\\[Su declaración aquí\\.\\.\\.\\]", contenido)) {
-  msg("No has completado la declaración de uso de MEL/LLM", "warn")
-  msg("Recuerda indicar si usaste herramientas de IA", "info")
+if (grepl("Su declaración aquí", contenido)) {
+  msg("No ha completado la declaración de uso de MEL/LLM", "warn")
+  msg("Recuerde indicar si usó herramientas de IA", "info")
   avisos <- avisos + 1
 } else {
   msg("Sección de declaración de MEL presente", "ok")

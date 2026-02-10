@@ -150,7 +150,7 @@ jobs:
           echo "::group::Verificaciones adicionales (informativas)"
 
           # Aviso sobre declaración de MEL
-          if grep -q "\[Su declaración aquí\.\.\.\]" tarea_proyecto_01.qmd; then
+          if grep -q "Su declaración aquí" tarea_proyecto_01.qmd; then
             echo "::warning file=tarea_proyecto_01.qmd::Recuerda completar la declaración de uso de MEL/LLM"
           fi
 

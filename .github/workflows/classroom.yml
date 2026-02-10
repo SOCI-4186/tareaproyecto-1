@@ -90,7 +90,15 @@ jobs:
 
           # Verificar que el estudiante cambió su nombre
           if grep -q "Pon tu nombre aquí" tarea_proyecto_01.qmd; then
-            echo "::error file=tarea_proyecto_01.qmd,line=4::No has cambiado tu nombre. Edita la línea 'author:' en el encabezado YAML."
+            echo "::error file=tarea_proyecto_01.qmd,line=4::No ha cambiado su nombre. Edite la línea 'author:' en el encabezado YAML."
+            echo "resultado=fallo" >> $GITHUB_OUTPUT
+            echo "::endgroup::"
+            exit 1
+          fi
+
+          # Verificar que el estudiante cambió su número de estudiante
+          if grep -q "Su número de estudiante" tarea_proyecto_01.qmd; then
+            echo "::error file=tarea_proyecto_01.qmd,line=4::No ha cambiado su número de estudiante. Edite la línea 'author:' en el encabezado YAML."
             echo "resultado=fallo" >> $GITHUB_OUTPUT
             echo "::endgroup::"
             exit 1

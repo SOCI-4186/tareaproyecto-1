@@ -1,6 +1,6 @@
 # Tarea de Proyecto № 1: Pregunta inicial de investigación
 
-## Fecha límite: martes, 10 de febrero de 2026 a las 23:59
+## Fecha límite: domingo, 15 de febrero de 2026 a las 23:59
 
 ---
 
@@ -59,7 +59,8 @@ En el documento, cambien:
 
 1. **Su nombre** (línea 4):
    ```yaml
-   author: "Su Nombre Completo  \nSu número de estudiante"
+   author: "Su Nombre Completo  
+Su número de estudiante"
    ```
 
 2. **Completen las secciones** reemplazando el texto de ejemplo con su contenido
